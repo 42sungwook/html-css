@@ -1,6 +1,7 @@
 Developer.Mozilla.org - html 필요한 정보를 갖고 있는 사이트
 
 HTML/element/input
+HTML/attributes
 
 Forms
 <form action=""> 
@@ -62,4 +63,55 @@ search google
 	</p>
 	<button>submit</button>
 
+</form>
+
+Validations
+1. server side validations
+2. built in validations
+-> attribute "required"
+minlength maxlength min max ...
+<input type="email" required>
+<input type="url">
+<input type="tel"> 
+...
+
+<h1>Race Registration!</h1>
+<form action="reg">
+  <p>
+    <label for="first">First Name</label>
+    <input type="text" id="first" name="first" required>
+    <label for="last">Last Name</label>
+    <input type="text" id="last" name="last" required>
+  </p>
+  <p>
+    Select a Race:
+    <div>
+      <input type="radio" name="race_type" id="fun" value="fun">
+      <label for="fun">Fun Run 5k</label>
+    </div>
+    <div>
+      <input type="radio" name="race_type" id="half" value="half">
+      <label for="half">Half Marathon</label>
+    </div>
+    <div>
+      <input type="radio" name="race_type" id="full" value="full">
+      <label for="full">Full Marathon</label>
+    </div>
+  </p>
+  <p>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+  </p>
+  <p>
+    <label for="age">Select Age Group</label>
+    <select name="age_group" id="age">
+      <option value="under 18">under 18</option>
+      <option value="18-30">18-30</option>
+      <option value="30-50">30-50</option>
+      <option value="50+">50+</option>
+    </select>
+  </p>
+  <button>Register!</button>
 </form>
